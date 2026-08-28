@@ -1,12 +1,14 @@
 import pandas as pd
-import yfinance as yf
+import numpy as np
 
-df = yf.download(
-    "AAPL",
-    period="6d",
-    interval="1m",  
-    progress= False
-)
-###df.index = df.index.tz_localize('None') ### Verificar como deveria atingir isto
-print(df)
-df.to_excel("Apple_stock_excel_teste3.xlsx")
+apple_stock = pd.read_csv("Apple_stock_history.csv")
+appl = apple_stock
+appl = appl["Open"].mean()
+
+### Full display
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+print(appl)
+
+### Data set for apple.csv https://www.kaggle.com/datasets/kalilurrahman/apple-stock-data-live-and-latest-from-ipo-date?select=Apple_stock_history.csv
+### Or this site for apple https://www.kaggle.com/datasets/kalilurrahman/apple-stock-data-live-and-latest-from-ipo-date?resource=download
