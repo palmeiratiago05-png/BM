@@ -3,7 +3,7 @@ import numpy as np
 
 apple_stock = pd.read_csv("Apple_stock_history.csv")
 appl = apple_stock
-appl = appl["Open"].mean()
+appl = appl["Open"].agg(["mean","sum","max","min"])
 
 ### Full display
 pd.set_option('display.max_rows', None)
