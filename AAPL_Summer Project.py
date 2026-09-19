@@ -21,7 +21,7 @@ def clean_data(import_data):
 dados_brutos = import_data()
 dados_limpos = clean_data(dados_brutos)
 print(dados_limpos)
-dados_limpos.to_excel(r"C:\Users\__\Downloads\190September.xlsx")
+dados_limpos.to_excel(r"C:\Users\Tiago Palmeira\Downloads\190September.xlsx")
 
 ### Data set for apple.csv https://www.kaggle.com/datasets/kalilurrahman/apple-stock-data-live-and-latest-from-ipo-date?select=Apple_stock_history.csv
 ### Or this site for apple https://www.kaggle.com/datasets/kalilurrahman/apple-stock-data-live-and-latest-from-ipo-date?resource=download
